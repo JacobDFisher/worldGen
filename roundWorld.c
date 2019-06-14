@@ -383,9 +383,9 @@ GLFWwindow *initialize(GLuint *vao, double *pos, double * dist, int nPoints, int
   }
   GLfloat * colors = malloc(sizeof(GLfloat)*3*nPoints);
   for(i=0; i<nPoints; i++){
-    colors[3*i] = (nDist>=1)?dist[3*i]:0;
-    colors[3*i+1] = (nDist>=2)?dist[3*i+1]:0;
-    colors[3*i+2] = (nDist>=3)?dist[3*i+2]:0;
+    colors[3*i] = (nDist>=1)?dist[3*i]*10:0;
+    colors[3*i+1] = (nDist>=2)?dist[3*i+1]*10:0;
+    colors[3*i+2] = (nDist>=3)?dist[3*i+2]*10:0;
   }
   GLuint vbo;
   glGenBuffers(1, &vbo);
